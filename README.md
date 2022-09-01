@@ -59,3 +59,69 @@ To list all containers.
  docker ps -a
 ```
 
+
+
+## Dockerize
+
+### Dokerfile
+
+Dockerfiles are text documents that allow you to build images for Docker.
+
+Here is the basic Docker file structure
+
+```
+# First step : Base image which is a name Docker will be recognized and will start by pulling it.
+FROM base_image  
+
+# To tell the Docker execute all commands in this folder
+WORKDIR folder_path_and_name
+
+#Second step : To tell which files on your local machines shoul go into the image.
+COPY source destination
+
+#run a command in the image to get some dependencies.. etc if needed for running app.
+RUN some_command
+
+#Specify the running port
+EXPOSE port_number
+
+#Then run your app
+CMD run_app_command
+```
+
+### Spring Boot Docker File Example
+
+Here is the Spring Boot dokerfile example
+
+```
+FROM openjdk:11.0  
+
+WORKDIR /app
+
+COPY ./target/hello-docker-0.0.1-SNAPSHOT.jar /app
+
+EXPOSE 8080
+
+CMD ["java", "-jar", "hello-docker-0.0.1-SNAPSHOT.jar"]
+```
+### Building And Running Container
+
+To build Docker file
+```
+docker build .  
+```
+To assing a name to your image
+```
+docker build -t IMAGE_NAME .  
+```
+To run the container
+```
+docker run IMAGE_NAME  
+```
+
+For my Spring Boot example you can find commands below.
+```
+docker build -t hello-docker . 
+docker run -it 8080:8080 hello-docker
+```
+
