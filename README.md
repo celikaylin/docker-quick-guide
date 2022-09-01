@@ -118,6 +118,10 @@ To run the container
 ```
 docker run IMAGE_NAME  
 ```
+To stop the container
+```
+docker stop IMAGE_NAME  
+```
 
 For my Spring Boot example you can find commands below.
 ```
