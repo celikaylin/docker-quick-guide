@@ -120,12 +120,12 @@ docker run IMAGE_NAME
 ```
 To stop the container
 ```
-docker stop IMAGE_NAME  
+docker stop CONTAINER_NAME  
 ```
 
 For my Spring Boot example you can find commands below.
 ```
 docker build -t hello-docker . 
-docker run -it 8080:8080 hello-docker
+docker run -p 8080:8080 hello-docker
 ```
 
