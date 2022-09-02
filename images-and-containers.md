@@ -1,5 +1,5 @@
 
-## Image and Container
+## Images and Containers
 Images are the blueprints.
 
 Containers are executable units of software.
