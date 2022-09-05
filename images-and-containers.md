@@ -1,5 +1,5 @@
 
-## Images and Containers
+## Image and Container
 Images are the blueprints.
 
 Containers are executable units of software.
@@ -9,7 +9,7 @@ Containers are executable units of software.
 
 
 #### ⚡️ Creating
-To build A Docker file and create an image
+To build a Docker file and create an image
 ```
 docker build .  
 ```
@@ -24,7 +24,7 @@ To assing a name and tag to your image
 ```
 docker build -t NEW_IMAGE_NAME:NEW_IMAGE_TAG .  
 ```
-To assing a name and to the container
+To assing a name to the container
 ```
 docker run --name NEW_CONTAINER_NAME  
 ```
@@ -40,6 +40,11 @@ To remove an image forcefully (when you get an error as it is used by stopped co
  docker rmi -f IMAGE_NAME_OR_ID
 ```
 
+To remove all unused images 
+```bash
+ docker image prune -a
+```
+
 To remove a container. 
 ```bash
  docker rm CONTAINER_NAME_OR_ID
@@ -49,6 +54,8 @@ To remove a container automatically when it's stopped.
 ```bash
  docker run --rm IMAGE_NAME_OR_ID
 ```
+
+
 
 
 #### ⚡️ Interactive Mode
@@ -94,11 +101,15 @@ To stop a container.
  docker stop CONTAINER_NAME_OR_ID
 ```
 
+#### 🚀 start vs run commands
+You can use both start and run commands to start a container but with a diffenrence. start command starts an existing container, but run command create and starts a new container.
+
 #### ⚡️ Logging
 To fetch the logs of a container. 
 ```bash
  docker logs CONTAINER_NAME_OR_ID
 ```
+
 
 
 ## Dockerize
@@ -159,3 +170,49 @@ Everything in the images is read only then, and you can't edit it by simply upda
 
 #### 🚀 Image Layer 
 Every instruction in your file creates a layer and these are cached. So when you rebuild your image it will be builded faster.
+
+## Pushing Image To Docker Hub
+
+To pussing an image to the repository follow below steps.
+
+- At Docker Hub create a respository.
+
+- Clone your exist image with the same name as the repository you created.
+```bash
+docker tag EXIST_IMAGE_NAME DOCKER_HUB_REPO_NAME
+```
+- Login to Docker Hub
+```bash
+ docker login
+```
+- Push image to Docker Hub
+```bash
+ docker push IMAGE_NAME
+```
+- Logout from Docker Hub
+```bash
+ docker logout
+```
+Below a step-by-step example from my spring boot hello world project.
+
+```bash
+ docker tag hello-docker aylincelik/spring-boot-hello-world
+ docker login
+ docker push aylincelik/spring-boot-hello-world
+ docker logout
+```
+
+## Pulling Image From Docker Hub
+You can pull an image from Docker Hub by below commands.
+```bash
+ docker pull IMAGE_NAME
+```
+or
+```bash
+ docker run IMAGE_NAME
+```
+But there is a important difference.
+#### 🚀 pull vs run commands
+Docker pull command always pull the latest version of the image. When you rebuild and push the image to the repo "pull" command will fetch the latest version of updated image.
+
+Docker run command first checks locally if it can not find the image locally then fetch latest version of the image from Hub. But if it finds image locally then it uses the local version. When you update image from repo, this command will not fetch the latest version. 
