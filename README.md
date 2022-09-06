@@ -21,3 +21,5 @@ This document includes quick information like some useful commands and tips.
 
  - [Images and Containers](https://github.com/celikaylin/docker-quick-guide/blob/main/images-and-containers.md)
  
+ - [External Data Storages (Volumes and Bind Mounts)](https://github.com/celikaylin/docker-quick-guide/blob/main/external-data-storages.md)
+ 
