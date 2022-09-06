@@ -106,6 +106,9 @@ To add bind mounts commad is below.
 ```
 Make sure your folder or file which you are sharing is listed at Docker sharing file list. It shouldn't be list it exact path, listed parent folder is enough.
 
+#### 🚀 File sharing
+The File sharing tab is only available in Hyper-V mode(Settings --> Resources --> File Sharing), because in WSL 2 mode and Windows container mode all files are automatically shared by Windows.
+
 #### 🚀 Shortcut of the full path of the project
 ```bash
  For windows        :   -v "%cd%":/app
@@ -113,5 +116,4 @@ Make sure your folder or file which you are sharing is listed at Docker sharing 
 ```
 
 
-#### 🚀 File sharing
-The File sharing tab is only available in Hyper-V mode(Settings --> Resources --> File Sharing), because in WSL 2 mode and Windows container mode all files are automatically shared by Windows.
+
