@@ -2,6 +2,8 @@
 
 Docker compose makes multi containers's setups easier.
 
+## Docker Compose Key Commands
+
 To just build images not starting services
 ```bash
  docker-compose build
@@ -32,7 +34,7 @@ To shut the services down (it also removes volumes)
  docker-compose down -v
 ```
 
-## Docker Compose File Structere
+## Docker Compose File Structure
 
 Here is detail of the structure
 ```bash
