@@ -29,7 +29,7 @@ This document includes quick information like some useful commands and tips.
 
  - [Utilities](https://github.com/celikaylin/docker-quick-guide/blob/main/utilities.md)
 
-    - [ENTRYPOINT vs. CMD](https://github.com/celikaylin/docker-quick-guide/blob/main/utilities.md#entrpoint-vs-cmd)
+    - [ENTRYPOINT vs. CMD](https://github.com/celikaylin/docker-quick-guide/blob/main/utilities.md#entrypoint-vs-cmd)
 
     - [.dockerignore](https://github.com/celikaylin/docker-quick-guide/blob/main/utilities.md#dockerignore-file)
 
