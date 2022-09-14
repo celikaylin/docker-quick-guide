@@ -15,6 +15,7 @@ This document includes quick information like some useful commands and tips.
  - [Docker Playground](https://labs.play-with-docker.com/)
  - [VS Code](https://code.visualstudio.com/)
  - [Docker Extension For VS Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+ - [Most Useful Udemy Course](https://www.udemy.com/course/docker-kubernetes-the-practical-guide/)
 
  
 ## Content
