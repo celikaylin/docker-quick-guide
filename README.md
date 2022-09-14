@@ -27,6 +27,8 @@ This document includes quick information like some useful commands and tips.
  
  - [Docker Compose](https://github.com/celikaylin/docker-quick-guide/blob/main/docker-compose.md)
 
+  - [Deploying Docker Containers](https://github.com/celikaylin/docker-quick-guide/blob/main/deploying-docker-containers.md)
+
  - [Utilities](https://github.com/celikaylin/docker-quick-guide/blob/main/utilities.md)
 
     - [ENTRYPOINT vs. CMD](https://github.com/celikaylin/docker-quick-guide/blob/main/utilities.md#entrypoint-vs-cmd)

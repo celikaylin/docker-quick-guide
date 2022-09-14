@@ -173,7 +173,7 @@ Every instruction in your file creates a layer and these are cached. So when you
 
 ## Pushing Image To Docker Hub
 
-To pussing an image to the repository follow below steps.
+To pushe an image to the repository follow below steps.
 
 - At Docker Hub create a respository.
 
@@ -187,7 +187,7 @@ docker tag EXIST_IMAGE_NAME DOCKER_HUB_REPO_NAME
 ```
 - Push image to Docker Hub
 ```bash
- docker push IMAGE_NAME
+ docker push  DOCKER_HUB_REPO_NAME
 ```
 - Logout from Docker Hub
 ```bash
