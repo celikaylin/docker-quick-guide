@@ -1,10 +1,10 @@
-# Deploying Containers
+# Deploying Docker Containers
 
-This document includes deployment of application to the Docker containers on AWS with basic/simple configurations for one project.
+This document includes deployment of an application to the Docker containers on AWS with basic/simple configurations for one project.
 
 ## Using AWS EC2
 
-Virtual servers in the cloud which basically means our own computer in the cloud. At this service you need you do everyting **manually**.
+It is an virtual servers in the cloud which basically means our own computer in the cloud. At this service you need **you do everyting manually**.
 
 
 ### Deploying An Application
@@ -17,23 +17,23 @@ Virtual servers in the cloud which basically means our own computer in the cloud
 
 - [Create an image](https://github.com/celikaylin/docker-quick-guide/blob/main/images-and-containers.md#key-docker-commands) and [push it to the Dockerhub](https://github.com/celikaylin/docker-quick-guide/blob/main/images-and-containers.md#pushing-image-to-docker-hub)
 
-Go to SSH terminal
+- Go to SSH terminal
 
-- To ensure that all essential packages on the remote machine are up to date 
+- Ensure that all essential packages on the remote machine are up to date 
 ```bash
 sudo yum update -y
 ```
 
-- To install extra software like Docker
+- Install extra software like Docker
 ```bash
 sudo amazon-linux-extras install docker
 ```
 
-- To start the service
+- Start the service
 ```bash
 sudo service docker start
 ```
-- To create and start the container
+- Create and start the container
 ```bash
 sudo docker run -d --rm -p 80:80 DOCKER_HUB_IMAGE_NAME
 ```
@@ -44,7 +44,7 @@ http://Public_IPv_address/
 ```
 
 #### 🚀 It doesn't work but why?
-And now your app is up, but when you browse the application you can not access it because the http traffic is not allowed for now. Find the `Security groups` of the instance then check `Inbound rules`. Here you will see just one rule which is allowed just SSH traffic over through port 22. But we need HTTP traffic too. 
+Now your app is up, but when you browse the application you can not access it because the http traffic is not allowed for now. Find the `Security groups` of the instance then check `Inbound rules`. Here you will see just one rule which is allowed just for SSH traffic over through port 22. But we need HTTP traffic too. 
 
 - Find the securitygroup of the launch instance then create a new `Inbound rule` . Attributes should be like this.
 ```bash
@@ -71,7 +71,7 @@ SSH traffic is open entire world. So it means entire world be able to connect th
 
 - Go to SSH terminal and stop the container.
 
-- [Pull the image](https://github.com/celikaylin/docker-quick-guide/blob/main/images-and-containers.md#pulling-image-from-docker-hub) (Here is important you shouldn run firstl `run` command firstly because it will not fetch the latest version of the image it looks locally and if exists uses it). 
+- [Pull the image](https://github.com/celikaylin/docker-quick-guide/blob/main/images-and-containers.md#pulling-image-from-docker-hub) (Here is important you should not run `run` command firstly because it will not fetch the latest version of the image it looks locally and if exists uses it). 
 
 - Create and start the container by using `run` command as earlier.
 
@@ -88,7 +88,7 @@ This service helps us for managing containers by **automatically**. It gives you
 
 - When finised everything you will see `View Service` button and click on it.
 
-- Go to `Task` tab and click on the running task to go detail then you will see `Public IP` at the `Network` section. Browse it and then it works.
+- Go to `Task` tab and click on the running task to go detail then you will see `Public IP` into the `Network` section. Browse it and then it works.
 
 
 ### Updating The Application 
