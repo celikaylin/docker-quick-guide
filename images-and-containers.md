@@ -1,9 +1,8 @@
 
 ## Image and Container
-Images are the blueprints.
+Images are the blueprints for containers and it is created with layers. It is read-only so it can not be run but it can be built.
 
-Containers are executable units of software.
-
+Containers are executable units of software. They are isolated (they have their own filesystem, data) and stateless(they can store data internally and it losts them without using volumes).
 
 ## Key Docker Commands
 

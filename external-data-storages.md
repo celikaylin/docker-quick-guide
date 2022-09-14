@@ -96,6 +96,8 @@ To create named volumes
 
 ⚡️ When you change your code, you can see the changes instantly without rebuild the image.
 
+⚡️ Do not use it in the production.
+
 #### 🚀 Typical use-case
 You want to provide latest data to the container without rebuilding image.
 
